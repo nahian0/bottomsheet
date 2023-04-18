@@ -174,7 +174,7 @@ Widget _bottomSheet(
                   height: 30,
                   decoration: BoxDecoration(
                     border: Border.all(color: Color(0xff2e64a4)),
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   child: Row(
                     children: [
@@ -251,7 +251,7 @@ Widget _textFields(
             height: 30,
             decoration: BoxDecoration(
               border: Border.all(color: Color(0xff2e64a4)),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
             ),
             child: Row(
               children: [
@@ -296,7 +296,7 @@ Widget _textFields(
             height: 30,
             decoration: BoxDecoration(
               border: Border.all(color: Color(0xff2e64a4)),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
             ),
             child: Row(
               children: [
