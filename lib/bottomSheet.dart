@@ -153,7 +153,7 @@ Widget _bottomSheet(
           SizedBox(
             height: 20,
           ),
-          _inputFields(context, fromDatecontroller, selectFromDate,
+          _textFields(context, fromDatecontroller, selectFromDate,
               todatecontroller, selectToDate),
           SizedBox(
             height: 10,
@@ -236,7 +236,7 @@ Widget _bottomSheet(
   );
 }
 
-Widget _inputFields(
+Widget _textFields(
   context,
   TextEditingController fromdateController,
   Function selectfromDate,
