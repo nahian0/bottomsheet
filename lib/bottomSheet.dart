@@ -117,48 +117,66 @@ Widget _bottomSheet(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30), topRight: Radius.circular(30))),
     child: Container(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.only(top: 15, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Search posted jobs",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff2e64a4),
-                  )),
-              GestureDetector(
-                onTap: () => Navigator.pop(context),
-                child: Container(
-                  child: Icon(
-                    Icons.close,
-                    color: Color(0xff2e64a4),
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Search posted jobs",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff2e64a4),
+                    )),
+                GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                    child: Icon(
+                      Icons.close,
+                      color: Color(0xff2e64a4),
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           Container(
+            padding: EdgeInsets.zero,
+            child: Container(
+              height: 0.5,
+              color: Color(0xff2e64a4),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
             child: Text(
               "Select Date",
               style: TextStyle(fontSize: 18),
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
-          _textFields(context, fromDatecontroller, selectFromDate,
-              todatecontroller, selectToDate),
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: _textFields(context, fromDatecontroller, selectFromDate,
+                todatecontroller, selectToDate),
+          ),
           SizedBox(
             height: 10,
           ),
           Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
             child: Text(
               "Keywords",
               style: TextStyle(fontSize: 18),
@@ -167,68 +185,74 @@ Widget _bottomSheet(
           SizedBox(
             height: 10,
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                  height: 30,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff2e64a4)),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    children: [
-                      SizedBox(width: 8),
-                      Expanded(
-                        child: TextField(
-                          controller: keyWordsController,
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'From date',
-                              hintStyle: TextStyle(color: Colors.grey),
-                              contentPadding: EdgeInsets.all(10)),
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 30,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xff2e64a4)),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 8),
+                        Expanded(
+                          child: TextField(
+                            controller: keyWordsController,
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'From date',
+                                hintStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.all(10)),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           SizedBox(
             height: 15,
           ),
-          Row(
-            children: [
-              Expanded(
-                child: InkWell(
-                  onTap: () {
-                    setText(context);
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xff2e64a4),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0xff2e64a4))),
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: Row(
+              children: [
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      setText(context);
+                      Navigator.pop(context);
+                    },
                     child: Container(
-                        padding: EdgeInsets.all(6),
-                        child: Center(
-                          child: Container(
-                            padding: EdgeInsets.all(5),
-                            child: Text(
-                              "Search",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 252, 249, 249),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15),
+                      decoration: BoxDecoration(
+                          color: Color(0xff2e64a4),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Color(0xff2e64a4))),
+                      child: Container(
+                          padding: EdgeInsets.all(6),
+                          child: Center(
+                            child: Container(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Search",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 252, 249, 249),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
                             ),
-                          ),
-                        )),
+                          )),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
@@ -250,7 +274,9 @@ Widget _textFields(
           child: Container(
             height: 30,
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xff2e64a4)),
+              border: Border.all(
+                color: Color(0xff2e64a4),
+              ),
               borderRadius: BorderRadius.circular(5),
             ),
             child: Row(
@@ -270,20 +296,39 @@ Widget _textFields(
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                    border: Border(
-                      left: BorderSide(color: Color(0xff2e64a4)),
+                    color: Color(0xfff2f8ff),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
                     ),
                   ),
-                  child: Center(
-                    child: InkWell(
-                      onTap: () => selectfromDate(context),
-                      child: Container(
-                        child: Icon(
-                          Icons.calendar_today,
-                          color: Color(0xff2e64a4),
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Color(0xff2e64a4),
+                                width: 1.5,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                      Center(
+                        child: InkWell(
+                          onTap: () => selectfromDate(context),
+                          child: Container(
+                            child: Icon(
+                              Icons.calendar_today,
+                              size: 20,
+                              color: Color(0xff2e64a4),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -316,20 +361,39 @@ Widget _textFields(
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                    border: Border(
-                      left: BorderSide(color: Color(0xff2e64a4)),
+                    color: Color(0xfff2f8ff),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
                     ),
                   ),
-                  child: Center(
-                    child: InkWell(
-                      onTap: () => selecttoDate(context),
-                      child: Container(
-                        child: Icon(
-                          Icons.calendar_today,
-                          color: Color(0xff2e64a4),
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Color(0xff2e64a4),
+                                width: 1.5,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                      Center(
+                        child: InkWell(
+                          onTap: () => selecttoDate(context),
+                          child: Container(
+                            child: Icon(
+                              Icons.calendar_today,
+                              size: 20,
+                              color: Color(0xff2e64a4),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
