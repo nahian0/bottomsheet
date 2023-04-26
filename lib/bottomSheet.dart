@@ -73,7 +73,8 @@ class _BottomSheetState extends State<BottomSheett> {
               child: const Text('Bottom Sheet'),
               onPressed: () {
                 showModalBottomSheet<void>(
-                  backgroundColor: Color.fromARGB(187, 241, 241, 245),
+                  backgroundColor:
+                      Color.fromARGB(186, 28, 28, 199).withOpacity(0),
                   context: context,
                   builder: (BuildContext context) {
                     return _bottomSheet(
@@ -112,6 +113,7 @@ Widget _bottomSheet(
     Function setText) {
   return Container(
     height: 280,
+    clipBehavior: Clip.antiAlias,
     decoration: BoxDecoration(
         color: Color.fromARGB(255, 255, 255, 255),
         borderRadius: BorderRadius.only(
