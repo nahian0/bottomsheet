@@ -151,7 +151,7 @@ Widget _bottomSheet(
             padding: EdgeInsets.zero,
             child: Container(
               height: 0.5,
-              color: Color(0xff2e64a4),
+              color: Color(0xff2e64a4).withOpacity(0.8),
             ),
           ),
           SizedBox(
@@ -193,7 +193,8 @@ Widget _bottomSheet(
                   child: Container(
                     height: 30,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xff2e64a4)),
+                      border:
+                          Border.all(color: Color(0xff2e64a4).withOpacity(0.5)),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Row(
@@ -204,7 +205,7 @@ Widget _bottomSheet(
                             controller: keyWordsController,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'From date',
+                                hintText: 'From Date',
                                 hintStyle: TextStyle(color: Colors.grey),
                                 contentPadding: EdgeInsets.all(10)),
                           ),
@@ -275,7 +276,7 @@ Widget _textFields(
             height: 30,
             decoration: BoxDecoration(
               border: Border.all(
-                color: Color(0xff2e64a4),
+                color: Color(0xff2e64a4).withOpacity(0.5),
               ),
               borderRadius: BorderRadius.circular(5),
             ),
@@ -287,7 +288,7 @@ Widget _textFields(
                     controller: fromdateController,
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'From date',
+                        hintText: 'From Date',
                         hintStyle: TextStyle(color: Colors.grey),
                         contentPadding: EdgeInsets.all(10)),
                   ),
@@ -309,8 +310,8 @@ Widget _textFields(
                           decoration: BoxDecoration(
                             border: Border(
                               left: BorderSide(
-                                color: Color(0xff2e64a4),
-                                width: 1.5,
+                                color: Color(0xff2e64a4).withOpacity(0.5),
+                                width: 1,
                               ),
                             ),
                           ),
@@ -340,7 +341,7 @@ Widget _textFields(
           child: Container(
             height: 30,
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xff2e64a4)),
+              border: Border.all(color: Color(0xff2e64a4).withOpacity(0.5)),
               borderRadius: BorderRadius.circular(5),
             ),
             child: Row(
@@ -351,7 +352,7 @@ Widget _textFields(
                     controller: todateController,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'To date',
+                      hintText: 'To Date',
                       hintStyle: TextStyle(color: Colors.grey),
                       contentPadding: EdgeInsets.all(10),
                     ),
@@ -374,8 +375,8 @@ Widget _textFields(
                           decoration: BoxDecoration(
                             border: Border(
                               left: BorderSide(
-                                color: Color(0xff2e64a4),
-                                width: 1.5,
+                                color: Color(0xff2e64a4).withOpacity(0.5),
+                                width: 1,
                               ),
                             ),
                           ),
