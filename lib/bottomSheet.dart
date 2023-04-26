@@ -160,7 +160,7 @@ Widget _bottomSheet(
           Container(
             padding: EdgeInsets.only(left: 15, right: 15),
             child: Text(
-              "Select Date",
+              "Select date",
               style: TextStyle(fontSize: 18),
             ),
           ),
@@ -206,8 +206,10 @@ Widget _bottomSheet(
                             decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'From Date',
-                                hintStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.all(10)),
+                                hintStyle:
+                                    TextStyle(color: Colors.grey, fontSize: 14),
+                                contentPadding:
+                                    EdgeInsets.only(bottom: 16, left: 5)),
                           ),
                         ),
                       ],
@@ -289,8 +291,8 @@ Widget _textFields(
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'From Date',
-                        hintStyle: TextStyle(color: Colors.grey),
-                        contentPadding: EdgeInsets.all(10)),
+                        hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                        contentPadding: EdgeInsets.only(bottom: 16, left: 5)),
                   ),
                 ),
                 Container(
@@ -353,8 +355,8 @@ Widget _textFields(
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'To Date',
-                      hintStyle: TextStyle(color: Colors.grey),
-                      contentPadding: EdgeInsets.all(10),
+                      hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                      contentPadding: EdgeInsets.only(bottom: 16, left: 5),
                     ),
                   ),
                 ),
